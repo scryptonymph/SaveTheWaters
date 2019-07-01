@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 62404755}
   - component: {fileID: 62404754}
   m_Layer: 5
-  m_Name: Claws Level Text (1)
+  m_Name: Claws Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 122047829}
   - component: {fileID: 122047828}
   m_Layer: 5
-  m_Name: Gigantic Level Text (1)
+  m_Name: Gigantic Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 138825024}
   - component: {fileID: 138825023}
   m_Layer: 5
-  m_Name: Scour Cps Text (1)
+  m_Name: Scour Cps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 165066536}
   - component: {fileID: 165066535}
   m_Layer: 5
-  m_Name: Scour Zone Number Text
+  m_Name: Scour Zone Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 309759570}
   - component: {fileID: 309759569}
   m_Layer: 5
-  m_Name: Gigantic Block S Number Text
+  m_Name: Gigantic Block S Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1607,6 +1607,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311078483}
   m_CullTransparentMesh: 0
+--- !u!1 &330808821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330808823}
+  - component: {fileID: 330808822}
+  m_Layer: 0
+  m_Name: Mittens
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &330808822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330808821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9600ec10b70150458f78f80a4676eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickerProperties:
+    cps: 0.1
+    startingCost: 3
+    costRaiseRate: 1.3
+  _shopCpsNumberText: {fileID: 1780945620}
+  _shopCostNumberText: {fileID: 732290706}
+  _shopLevelNumberText: {fileID: 1117609662}
+  _levelNumberText: {fileID: 946652181}
+--- !u!4 &330808823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330808821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 920246499}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342569966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,7 +1931,7 @@ GameObject:
   - component: {fileID: 357572940}
   - component: {fileID: 357572939}
   m_Layer: 5
-  m_Name: Gigantic Cps Text (1)
+  m_Name: Gigantic Cps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2107,7 +2158,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 424592245}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 712297069}
+        m_MethodName: BuyPicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &424592245
@@ -2317,7 +2379,7 @@ GameObject:
   - component: {fileID: 440123688}
   - component: {fileID: 440123687}
   m_Layer: 5
-  m_Name: Polyetic Collector Number Text
+  m_Name: Polyetic Collector Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2475,7 +2537,7 @@ GameObject:
   - component: {fileID: 450920997}
   - component: {fileID: 450920996}
   m_Layer: 5
-  m_Name: Claws Number Text
+  m_Name: Claws Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2672,7 +2734,7 @@ GameObject:
   - component: {fileID: 495287506}
   - component: {fileID: 495287505}
   m_Layer: 5
-  m_Name: Polyetic Cps Text (1)
+  m_Name: Polyetic Cps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3064,7 +3126,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 510471437}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1939580622}
+        m_MethodName: BuyPicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &510471437
@@ -3267,7 +3340,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 525829379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238768357}
+        m_MethodName: BuyPicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &525829379
@@ -3436,7 +3520,7 @@ GameObject:
   - component: {fileID: 603098230}
   - component: {fileID: 603098229}
   m_Layer: 5
-  m_Name: Polyetic Cost Text
+  m_Name: Polyetic Cost Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3663,7 +3747,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 644366201}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1684469189}
+        m_MethodName: BuyPicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &644366201
@@ -4260,7 +4355,7 @@ GameObject:
   - component: {fileID: 706186862}
   - component: {fileID: 706186861}
   m_Layer: 5
-  m_Name: Mittens Cps Text (1)
+  m_Name: Mittens Cps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4566,6 +4661,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711664294}
   m_CullTransparentMesh: 0
+--- !u!1 &712297068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 712297070}
+  - component: {fileID: 712297069}
+  m_Layer: 0
+  m_Name: Scour Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &712297069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712297068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9600ec10b70150458f78f80a4676eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickerProperties:
+    cps: 0.3
+    startingCost: 100
+    costRaiseRate: 1.3
+  _shopCpsNumberText: {fileID: 1875096280}
+  _shopCostNumberText: {fileID: 1810200393}
+  _shopLevelNumberText: {fileID: 2030170341}
+  _levelNumberText: {fileID: 165066535}
+--- !u!4 &712297070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712297068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 920246499}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &717384287
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,7 +4882,7 @@ GameObject:
   - component: {fileID: 732290707}
   - component: {fileID: 732290706}
   m_Layer: 5
-  m_Name: Mittens Cost Text
+  m_Name: Mittens Cost Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5212,6 +5358,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793382466}
   m_CullTransparentMesh: 0
+--- !u!1 &920246498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920246499}
+  m_Layer: 0
+  m_Name: PICKERS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &920246499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920246498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 330808823}
+  - {fileID: 712297070}
+  - {fileID: 1684469190}
+  - {fileID: 1939580623}
+  - {fileID: 1238768356}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &946652179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5224,7 +5405,7 @@ GameObject:
   - component: {fileID: 946652182}
   - component: {fileID: 946652181}
   m_Layer: 5
-  m_Name: Mittens Number Text
+  m_Name: Mittens Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5628,6 +5809,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019377411}
   m_CullTransparentMesh: 0
+--- !u!1 &1037274359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037274360}
+  m_Layer: 0
+  m_Name: MANAGEMENT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1037274360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037274359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1132899976}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1037531481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5956,7 +6168,7 @@ GameObject:
   - component: {fileID: 1069472649}
   - component: {fileID: 1069472648}
   m_Layer: 5
-  m_Name: Claws Cost Text
+  m_Name: Claws Cost Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6504,7 +6716,7 @@ GameObject:
   - component: {fileID: 1117609663}
   - component: {fileID: 1117609662}
   m_Layer: 5
-  m_Name: Mittens Level Text (1)
+  m_Name: Mittens Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6693,6 +6905,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1132899975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132899976}
+  - component: {fileID: 1132899977}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1132899976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132899975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1037274360}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1132899977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132899975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15165e838a23d4892d2b2baa1eb9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _erasedPlasticText: {fileID: 432464509}
 --- !u!1001 &1140713959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6746,7 +7002,7 @@ GameObject:
   - component: {fileID: 1160749316}
   - component: {fileID: 1160749315}
   m_Layer: 5
-  m_Name: Gigantic Cost Text
+  m_Name: Gigantic Cost Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7366,6 +7622,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200241606}
   m_CullTransparentMesh: 0
+--- !u!1 &1238768355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238768356}
+  - component: {fileID: 1238768357}
+  m_Layer: 0
+  m_Name: Gigantic Block S
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1238768356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238768355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 920246499}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1238768357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238768355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9600ec10b70150458f78f80a4676eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickerProperties:
+    cps: 6
+    startingCost: 50000
+    costRaiseRate: 1.3
+  _shopCpsNumberText: {fileID: 1072816604}
+  _shopCostNumberText: {fileID: 1160749315}
+  _shopLevelNumberText: {fileID: 122047828}
+  _levelNumberText: {fileID: 309759569}
 --- !u!1 &1249589793
 GameObject:
   m_ObjectHideFlags: 0
@@ -8545,6 +8852,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1684469188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1684469190}
+  - component: {fileID: 1684469189}
+  m_Layer: 0
+  m_Name: Claws
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1684469189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684469188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9600ec10b70150458f78f80a4676eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickerProperties:
+    cps: 1
+    startingCost: 1000
+    costRaiseRate: 1.3
+  _shopCpsNumberText: {fileID: 692824994}
+  _shopCostNumberText: {fileID: 1069472648}
+  _shopLevelNumberText: {fileID: 62404754}
+  _levelNumberText: {fileID: 450920996}
+--- !u!4 &1684469190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684469188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 920246499}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1730367197
 GameObject:
   m_ObjectHideFlags: 0
@@ -8855,7 +9213,7 @@ GameObject:
   - component: {fileID: 1810200394}
   - component: {fileID: 1810200393}
   m_Layer: 5
-  m_Name: Scour Cost Text
+  m_Name: Scour Cost Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9682,6 +10040,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937419585}
   m_CullTransparentMesh: 0
+--- !u!1 &1939580621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1939580623}
+  - component: {fileID: 1939580622}
+  m_Layer: 0
+  m_Name: Polyetic Collector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1939580622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939580621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9600ec10b70150458f78f80a4676eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickerProperties:
+    cps: 3.1
+    startingCost: 10000
+    costRaiseRate: 1.3
+  _shopCpsNumberText: {fileID: 667420740}
+  _shopCostNumberText: {fileID: 603098229}
+  _shopLevelNumberText: {fileID: 2048918423}
+  _levelNumberText: {fileID: 440123687}
+--- !u!4 &1939580623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939580621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 920246499}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1967779316
 GameObject:
   m_ObjectHideFlags: 0
@@ -10034,7 +10443,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1991533584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 330808822}
+        m_MethodName: BuyPicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1991533584
@@ -10260,7 +10680,7 @@ GameObject:
   - component: {fileID: 2030170342}
   - component: {fileID: 2030170341}
   m_Layer: 5
-  m_Name: Scour Level Text (1)
+  m_Name: Scour Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10418,7 +10838,7 @@ GameObject:
   - component: {fileID: 2048918424}
   - component: {fileID: 2048918423}
   m_Layer: 5
-  m_Name: Polyetic Level Text (1)
+  m_Name: Polyetic Level Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10615,7 +11035,7 @@ GameObject:
   - component: {fileID: 2123418527}
   - component: {fileID: 2123418526}
   m_Layer: 5
-  m_Name: Claws Cps Text (1)
+  m_Name: Claws Cps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
