@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
 
         Instance = this;
 
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     public void UpdateErasedPlastic() {
