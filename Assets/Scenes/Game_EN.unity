@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _erasedPlasticText: {fileID: 432464509}
+  _ppsText: {fileID: 1500608168}
 --- !u!1 &122047826
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +601,7 @@ GameObject:
   - component: {fileID: 138825024}
   - component: {fileID: 138825023}
   m_Layer: 5
-  m_Name: Scour Cps Text
+  m_Name: Scour Pps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +646,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Cps:'
+  m_text: 'Pps:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -803,7 +804,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -873,7 +874,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 165066535}
-    characterCount: 3
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1392,7 +1393,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -1462,7 +1463,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 309759569}
-    characterCount: 3
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1681,11 +1682,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickerProperties:
-    cps: 0.1
+    pps: 0.1
     startingCost: 3
     costRaiseRate: 1.3
   _player: {fileID: 96039329}
-  _shopCpsNumberText: {fileID: 1780945620}
+  _shopPpsNumberText: {fileID: 1780945620}
   _shopCostNumberText: {fileID: 732290706}
   _shopLevelNumberText: {fileID: 1117609662}
   _levelNumberText: {fileID: 946652181}
@@ -1977,7 +1978,7 @@ GameObject:
   - component: {fileID: 357572940}
   - component: {fileID: 357572939}
   m_Layer: 5
-  m_Name: Gigantic Cps Text
+  m_Name: Gigantic Pps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2022,7 +2023,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Cps:'
+  m_text: 'Pps:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -2312,7 +2313,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Erased 0 000 000 plastic!
+  m_text: Erased 0 plastic!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -2382,10 +2383,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 432464509}
-    characterCount: 25
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 5
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -2470,7 +2471,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -2540,7 +2541,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 440123687}
-    characterCount: 3
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -2659,7 +2660,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -2729,7 +2730,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 450920996}
-    characterCount: 3
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -2811,7 +2812,7 @@ GameObject:
   - component: {fileID: 495287506}
   - component: {fileID: 495287505}
   m_Layer: 5
-  m_Name: Polyetic Cps Text
+  m_Name: Polyetic Pps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2856,7 +2857,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Cps:'
+  m_text: 'Pps:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -4016,7 +4017,7 @@ GameObject:
   - component: {fileID: 667420741}
   - component: {fileID: 667420740}
   m_Layer: 5
-  m_Name: Polyetic Cps Number
+  m_Name: Polyetic Pps Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4274,7 +4275,7 @@ GameObject:
   - component: {fileID: 692824995}
   - component: {fileID: 692824994}
   m_Layer: 5
-  m_Name: Claws Cps Number
+  m_Name: Claws Pps Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4432,7 +4433,7 @@ GameObject:
   - component: {fileID: 706186862}
   - component: {fileID: 706186861}
   m_Layer: 5
-  m_Name: Mittens Cps Text
+  m_Name: Mittens Pps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4477,7 +4478,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Cps:'
+  m_text: 'Pps:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -4768,11 +4769,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickerProperties:
-    cps: 0.3
+    pps: 0.3
     startingCost: 100
     costRaiseRate: 1.3
   _player: {fileID: 96039329}
-  _shopCpsNumberText: {fileID: 1875096280}
+  _shopPpsNumberText: {fileID: 1875096280}
   _shopCostNumberText: {fileID: 1810200393}
   _shopLevelNumberText: {fileID: 2030170341}
   _levelNumberText: {fileID: 165066535}
@@ -5528,7 +5529,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -5598,7 +5599,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 946652181}
-    characterCount: 3
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -6478,7 +6479,7 @@ GameObject:
   - component: {fileID: 1072816605}
   - component: {fileID: 1072816604}
   m_Layer: 5
-  m_Name: Gigantic Cps Number
+  m_Name: Gigantic Pps Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7703,11 +7704,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickerProperties:
-    cps: 6
+    pps: 6
     startingCost: 50000
     costRaiseRate: 1.3
   _player: {fileID: 96039329}
-  _shopCpsNumberText: {fileID: 1072816604}
+  _shopPpsNumberText: {fileID: 1072816604}
   _shopCostNumberText: {fileID: 1160749315}
   _shopLevelNumberText: {fileID: 122047828}
   _levelNumberText: {fileID: 309759569}
@@ -8405,7 +8406,7 @@ GameObject:
   - component: {fileID: 1500608169}
   - component: {fileID: 1500608168}
   m_Layer: 5
-  m_Name: Rate Text
+  m_Name: Pps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8450,7 +8451,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 000.0 per second
+  m_text: 0.0 per second
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,
@@ -8520,7 +8521,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1500608168}
-    characterCount: 16
+    characterCount: 14
     spriteCount: 0
     spaceCount: 2
     wordCount: 4
@@ -8920,11 +8921,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickerProperties:
-    cps: 1
+    pps: 1
     startingCost: 1000
     costRaiseRate: 1.3
   _player: {fileID: 96039329}
-  _shopCpsNumberText: {fileID: 692824994}
+  _shopPpsNumberText: {fileID: 692824994}
   _shopCostNumberText: {fileID: 1069472648}
   _shopLevelNumberText: {fileID: 62404754}
   _levelNumberText: {fileID: 450920996}
@@ -9028,7 +9029,7 @@ GameObject:
   - component: {fileID: 1780945621}
   - component: {fileID: 1780945620}
   m_Layer: 5
-  m_Name: Mittens Cps Number
+  m_Name: Mittens Pps Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9410,6 +9411,7 @@ GameObject:
   - component: {fileID: 1835290939}
   - component: {fileID: 1835290938}
   - component: {fileID: 1835290937}
+  - component: {fileID: 1835290940}
   m_Layer: 5
   m_Name: Plastic Float
   m_TagString: Untagged
@@ -9476,8 +9478,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 96039329}
-        m_MethodName: ErasePlastic
+      - m_Target: {fileID: 1835290940}
+        m_MethodName: OnMouseDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9526,6 +9528,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835290935}
   m_CullTransparentMesh: 0
+--- !u!114 &1835290940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835290935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f45aa15105aa64db3a55f7379ec360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 96039329}
 --- !u!1 &1873957068
 GameObject:
   m_ObjectHideFlags: 0
@@ -9696,7 +9711,7 @@ GameObject:
   - component: {fileID: 1875096281}
   - component: {fileID: 1875096280}
   m_Layer: 5
-  m_Name: Scour Cps Number
+  m_Name: Scour Pps Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10237,11 +10252,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickerProperties:
-    cps: 3.1
+    pps: 3.1
     startingCost: 10000
     costRaiseRate: 1.3
   _player: {fileID: 96039329}
-  _shopCpsNumberText: {fileID: 667420740}
+  _shopPpsNumberText: {fileID: 667420740}
   _shopCostNumberText: {fileID: 603098229}
   _shopLevelNumberText: {fileID: 2048918423}
   _levelNumberText: {fileID: 440123687}
@@ -11203,7 +11218,7 @@ GameObject:
   - component: {fileID: 2123418527}
   - component: {fileID: 2123418526}
   m_Layer: 5
-  m_Name: Claws Cps Text
+  m_Name: Claws Pps Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11248,7 +11263,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Cps:'
+  m_text: 'Pps:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18f7ab92cb89f6b439d278c890fed3d9, type: 2}
   m_sharedMaterial: {fileID: 21797262944132810, guid: 18f7ab92cb89f6b439d278c890fed3d9,

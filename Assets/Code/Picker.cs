@@ -12,7 +12,7 @@ public class PickerData {
 
 [Serializable]
 public class PickerProperties {
-    public float cps;
+    public float pps;
     public int startingCost;
     public float costRaiseRate;
 }
@@ -25,21 +25,20 @@ public class Picker : MonoBehaviour
 
     [SerializeField] private Player _player;
 
-    [SerializeField] private TMP_Text _shopCpsNumberText;
+    [SerializeField] private TMP_Text _shopPpsNumberText;
     [SerializeField] private TMP_Text _shopCostNumberText;
     [SerializeField] private TMP_Text _shopLevelNumberText;
     [SerializeField] private TMP_Text _levelNumberText;
 
     private int _currentLevel = 0;
     private int _currentCost = 0;
-    private float _eraseInterval;
+    
 
     private void Start() {
         //_uiManager = UIManager.Instance;
 
-        _shopCpsNumberText.text = pickerProperties.cps.ToString();
+        _shopPpsNumberText.text = pickerProperties.pps.ToString();
         _currentCost = pickerProperties.startingCost;
-        _eraseInterval = 1 / pickerProperties.cps;
     }
 
     public void BuyPicker() {
@@ -47,28 +46,22 @@ public class Picker : MonoBehaviour
             return;
         }
 
-        _player.ErasePlastic(-_currentCost);
+        if (!_player.PickersInUse) {
+            _player.PickersInUse = true;
+        }
+
+        _player.UpdatePlastic(-_currentCost, pickerProperties.pps);
 
         _currentCost = Mathf.RoundToInt(_currentCost * pickerProperties.costRaiseRate);
 
         _currentLevel++;
 
         UpdatePickerUI();
-
-        StartCoroutine(ErasePlastic(_eraseInterval));
     }
 
     private void UpdatePickerUI() {
         _shopCostNumberText.text = _currentCost.ToString();
         _shopLevelNumberText.text = _currentLevel.ToString();
         _levelNumberText.text = _currentLevel.ToString();
-    }
-
-    private IEnumerator ErasePlastic(float time) {
-        while (true) {
-            yield return new WaitForSeconds(time);
-
-            _player.ErasePlastic();
-        }
     }
 }
