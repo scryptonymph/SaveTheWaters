@@ -32,12 +32,12 @@ public class Picker : MonoBehaviour
 
     private int _currentLevel = 0;
     private int _currentCost = 0;
-    
 
     private void Start() {
         //_uiManager = UIManager.Instance;
-
         _shopPpsNumberText.text = pickerProperties.pps.ToString();
+        _shopCostNumberText.text = pickerProperties.startingCost.ToString();
+
         _currentCost = pickerProperties.startingCost;
     }
 

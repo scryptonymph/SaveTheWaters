@@ -61,35 +61,23 @@ public class Player : MonoBehaviour {
         StartCoroutine(UpdatePlasticContinous());
     }
 
-    //private void Update() {
-    //    if (_tempPps < InputPps) {
-    //        _tempPps += Time.deltaTime;
+    private IEnumerator FluctuatePps(int inputPerSecond) {
+        yield return new WaitUntil(() => PickersInUse == true);
 
-    //        _ppsText.text = _permanentPps + _tempPps + " per second";
-    //    } else if (_tempPps > 0) {
-    //        InputPps = 0;
+        while(_tempPps < inputPerSecond) {
+            _tempPps += 0.2f;
 
-    //        _tempPps -= Time.deltaTime;
+            _ppsText.text = _permanentPps + _tempPps + " per second";
+        }
 
-    //        _ppsText.text = _permanentPps + _tempPps + " per second";
-    //    }
-    //}
+        while (_tempPps > 0) {
+            _tempPps -= 0.2f;
 
-    //public IEnumerator FluctuatePps(int inputPerSecond) {
-    //    while (_tempPps < inputPerSecond) {
-    //        _tempPps += Time.deltaTime;
+            _ppsText.text = _permanentPps + _tempPps + " per second";
+        }
 
-    //        _ppsText.text = _permanentPps + _tempPps + " per second";
-    //    }
-
-    //    while (_tempPps > 0) {
-    //        _tempPps -= Time.deltaTime;
-
-    //        _ppsText.text = _permanentPps + _tempPps + " per second";
-    //    }
-
-    //    yield return null;
-    //}
+        yield return null;
+    }
 
     public void UpdatePlastic(int cost, float pps) {
         CurrentErasedPlastic += cost;
@@ -98,7 +86,7 @@ public class Player : MonoBehaviour {
 
         _permanentPps += pps;
 
-        _ppsText.text = _permanentPps + " per second";
+        _ppsText.text = _permanentPps.ToString("F1") + " per second";
 
         _eraseInterval = 1 / _permanentPps;
     }
