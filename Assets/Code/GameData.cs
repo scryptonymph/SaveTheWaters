@@ -5,6 +5,7 @@ using System;
 
 [Serializable]
 public class GameData {
-    private PlayerData _playerData;
+    private PlasticData _plasticData;
     private List<PickerData> _pickerData;
+    private TransactionData _transactionData;
 }

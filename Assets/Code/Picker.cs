@@ -6,6 +6,7 @@ using TMPro;
 
 [Serializable]
 public class PickerData {
+    private float _pickerPps;
     private int _pickerLevel;
     private float _pickerCost;
 }
@@ -23,7 +24,7 @@ public class Picker : MonoBehaviour
 
     public PickerProperties pickerProperties;
 
-    [SerializeField] private Player _player;
+    [SerializeField] private Plastic _plastic;
 
     [SerializeField] private TMP_Text _shopPpsNumberText;
     [SerializeField] private TMP_Text _shopCostNumberText;
@@ -42,15 +43,15 @@ public class Picker : MonoBehaviour
     }
 
     public void BuyPicker() {
-        if (_currentCost > _player.CurrentErasedPlastic) {
+        if (_currentCost > _plastic.CurrentErasedPlastic) {
             return;
         }
 
-        if (!_player.PickersInUse) {
-            _player.PickersInUse = true;
+        if (!_plastic.PickersInUse) {
+            _plastic.PickersInUse = true;
         }
 
-        _player.UpdatePlastic(-_currentCost, pickerProperties.pps);
+        _plastic.UpdatePlastic(-_currentCost, pickerProperties.pps);
 
         _currentCost = Mathf.RoundToInt(_currentCost * pickerProperties.costRaiseRate);
 

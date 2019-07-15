@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private Plastic _plastic;
 
     private float _timer;
     private int _inputCounter;
@@ -15,7 +15,7 @@ public class PlayerInput : MonoBehaviour
         if (_timer >= 1f) {
             _timer = 0;
 
-            _player.InputPps = _inputCounter;
+            _plastic.InputPps = _inputCounter;
 
             _inputCounter = 0;
         }
@@ -27,6 +27,6 @@ public class PlayerInput : MonoBehaviour
 
         Debug.Log(_inputCounter);
 
-        _player.UpdatePlastic();
+        _plastic.UpdatePlastic();
     }
 }
