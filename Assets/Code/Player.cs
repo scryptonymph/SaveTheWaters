@@ -82,7 +82,7 @@ public class Player : MonoBehaviour {
     public void UpdatePlastic(int cost, float pps) {
         CurrentErasedPlastic += cost;
 
-        _erasedPlasticText.text = "Erased " + _currentErasedPlastic + " plastic!";
+        _erasedPlasticText.text = "<size=60%>Erased  <size=100%><voffset=-0.1em>" + CurrentErasedPlastic + "</voffset> <size=60%>plastic!";
 
         _permanentPps += pps;
 
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour {
     public void UpdatePlastic() {
         CurrentErasedPlastic++;
 
-        _erasedPlasticText.text = "Erased " + _currentErasedPlastic + " plastic!";
+        _erasedPlasticText.text = "<size=60%>Erased  <size=100%><voffset=-0.1em>" + CurrentErasedPlastic + "</voffset> <size=60%>plastic!";
     }
 
     private IEnumerator UpdatePlasticContinous() {
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour {
 
             CurrentErasedPlastic++;
 
-            _erasedPlasticText.text = "Erased " + _currentErasedPlastic + " plastic!";
+            _erasedPlasticText.text = "<size=60%>Erased  <size=100%><voffset=-0.1em>" + CurrentErasedPlastic + "</voffset> <size=60%>plastic!";
         }
     }
 }
