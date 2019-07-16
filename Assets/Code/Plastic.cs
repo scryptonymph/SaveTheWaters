@@ -26,6 +26,7 @@ public class Plastic : MonoBehaviour {
     }
 
     private float _permanentPps;
+
     private float _eraseInterval;
 
     private float _inputPps;

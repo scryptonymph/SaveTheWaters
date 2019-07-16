@@ -45,7 +45,7 @@ public class Transaction : MonoBehaviour
                 break;
         }
 
-        if (_currentPrice > CurrentMoney) {
+        if (_currentPrice > CurrentMoney || !_plastic.PickersInUse) {
             return;
         }
 
