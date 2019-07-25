@@ -1692,6 +1692,7 @@ MonoBehaviour:
   _shopCostNumberText: {fileID: 732290706}
   _shopLevelNumberText: {fileID: 1117609662}
   _levelNumberText: {fileID: 946652181}
+  _pickerButton: {fileID: 1982387294}
 --- !u!4 &330808823
 Transform:
   m_ObjectHideFlags: 0
@@ -4223,7 +4224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &646165364
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5234,6 +5235,7 @@ MonoBehaviour:
   _shopCostNumberText: {fileID: 1810200393}
   _shopLevelNumberText: {fileID: 2030170341}
   _levelNumberText: {fileID: 165066535}
+  _pickerButton: {fileID: 646165363}
 --- !u!4 &712297070
 Transform:
   m_ObjectHideFlags: 0
@@ -6438,7 +6440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1007514433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6567,7 +6569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1019377412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8584,6 +8586,7 @@ MonoBehaviour:
   _shopCostNumberText: {fileID: 1160749315}
   _shopLevelNumberText: {fileID: 122047828}
   _levelNumberText: {fileID: 309759569}
+  _pickerButton: {fileID: 1007514432}
 --- !u!1 &1249589793
 GameObject:
   m_ObjectHideFlags: 0
@@ -8642,7 +8645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1293968718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10087,6 +10090,7 @@ MonoBehaviour:
   _shopCostNumberText: {fileID: 1069472648}
   _shopLevelNumberText: {fileID: 62404754}
   _levelNumberText: {fileID: 450920996}
+  _pickerButton: {fileID: 1293968717}
 --- !u!4 &1684469190
 Transform:
   m_ObjectHideFlags: 0
@@ -11658,6 +11662,7 @@ MonoBehaviour:
   _shopCostNumberText: {fileID: 603098229}
   _shopLevelNumberText: {fileID: 2048918423}
   _levelNumberText: {fileID: 440123687}
+  _pickerButton: {fileID: 1019377411}
 --- !u!4 &1939580623
 Transform:
   m_ObjectHideFlags: 0

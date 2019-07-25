@@ -9,6 +9,7 @@ public class PickerData {
     private float _pickerPps;
     private int _pickerLevel;
     private float _pickerCost;
+    private bool _pickerButtonActive;
 }
 
 [Serializable]
@@ -31,6 +32,8 @@ public class Picker : MonoBehaviour
     [SerializeField] private TMP_Text _shopLevelNumberText;
     [SerializeField] private TMP_Text _levelNumberText;
 
+    [SerializeField] private GameObject _pickerButton;
+
     private int _currentLevel = 0;
     private int _currentCost = 0;
 
@@ -45,6 +48,10 @@ public class Picker : MonoBehaviour
     public void BuyPicker() {
         if (_currentCost > _plastic.CurrentErasedPlastic) {
             return;
+        }
+
+        if (!_pickerButton.activeInHierarchy) {
+            _pickerButton.SetActive(true);
         }
 
         if (!_plastic.PickersInUse) {
