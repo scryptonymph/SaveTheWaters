@@ -15,6 +15,8 @@ public class Transaction : MonoBehaviour
 
     [SerializeField] private Plastic _plastic;
 
+    [SerializeField] private GameObject _donationWindow;
+
     private float _currentMoney;
 
     public float CurrentMoney {
@@ -26,14 +28,22 @@ public class Transaction : MonoBehaviour
         }
     }
 
+    private int _yield;
+
     private float _currentPrice;
+
+    public float CurrentPrice {
+        get {
+            return _currentPrice;
+        }
+    }
 
     private void Start() {
         CurrentMoney = 10;
     }
 
-    public void BuyYield(int days) {
-        switch (days) {
+    public void PrepareTransaction(int _yield) {
+        switch (_yield) {
             case 1:
                 _currentPrice = _yieldPrices[0];
                 break;
@@ -49,10 +59,14 @@ public class Transaction : MonoBehaviour
             return;
         }
 
+        _donationWindow.SetActive(true);
+    }
+
+    public void MakeTransaction() {
         CurrentMoney -= _currentPrice;
 
         Debug.Log("money " + CurrentMoney);
 
-        _plastic.UpdatePlastic(days);
+        _plastic.UpdatePlastic(_yield);
     }
 }
