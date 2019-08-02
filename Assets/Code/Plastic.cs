@@ -113,6 +113,16 @@ public class Plastic : MonoBehaviour {
         UpdatePpsText();
     }
 
+    public void Update() {
+        UpdatePpsText();
+    }
+
+    public void UpdatePlastic() {
+        CurrentErasedPlastic++;
+
+        UpdatePlasticText();
+    }
+
     public void UpdatePlastic(int cost, float pps) {
         CurrentErasedPlastic += cost;
 
@@ -127,12 +137,6 @@ public class Plastic : MonoBehaviour {
 
     public void UpdatePlastic(int days) {
         CurrentErasedPlastic += Mathf.RoundToInt(_permanentPps * _dayProductionMultiplier * days);
-
-        UpdatePlasticText();
-    }
-
-    public void UpdatePlastic() {
-        CurrentErasedPlastic++;
 
         UpdatePlasticText();
     }
@@ -154,24 +158,6 @@ public class Plastic : MonoBehaviour {
     }
 
     private void UpdatePpsText() {
-        _ppsText.text = _permanentPps.ToString("F1") + " per second";
-    }
-
-    private IEnumerator FluctuatePps(int inputPerSecond) {
-        yield return new WaitUntil(() => PickersInUse == true);
-
-        while(_tempPps < inputPerSecond) {
-            _tempPps += 0.2f;
-
-            _ppsText.text = _permanentPps + _tempPps + " per second";
-        }
-
-        while(_tempPps > 0) {
-            _tempPps -= 0.2f;
-
-            _ppsText.text = _permanentPps + _tempPps + " per second";
-        }
-
-        yield return null;
+        _ppsText.text = (_permanentPps + InputPps).ToString("F1") + " per second";
     }
 }

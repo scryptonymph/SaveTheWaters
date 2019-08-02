@@ -6,26 +6,24 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private Plastic _plastic;
 
-    private float _timer;
-    private int _inputCounter;
+    private List<float> _timesOfInput = new List<float>();
 
     private void Update() {
-        _timer += Time.deltaTime;
-
-        if (_timer >= 1f) {
-            _timer = 0;
-
-            _plastic.InputPps = _inputCounter;
-
-            _inputCounter = 0;
+        for (int i = 0; i < _timesOfInput.Count; i++) {
+            // If time of input is over a second old, discount the input from count
+            if (_timesOfInput[i] <= Time.timeSinceLevelLoad - 2) {
+                _timesOfInput.RemoveAt(i);
+            }
         }
+
+        // 1.1f times added to make the value more interesting.
+        _plastic.InputPps = _timesOfInput.Count * 1.1f;
     }
 
     private void OnMouseDown()
     {
-        _inputCounter++;
-
-        Debug.Log(_inputCounter);
+        // Records periods in time when input was received
+        _timesOfInput.Add(Time.timeSinceLevelLoad);
 
         _plastic.UpdatePlastic();
     }
