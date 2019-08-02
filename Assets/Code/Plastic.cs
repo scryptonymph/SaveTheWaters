@@ -8,6 +8,34 @@ using TMPro;
 public class PlasticData {
     private int _erasedPlastic;
     private float _pps;
+    private bool _pickersUsed;
+
+    public int ErasedPlastic {
+        get {
+            return _erasedPlastic;
+        }
+        set {
+            _erasedPlastic = value;
+        }
+    }
+
+    public float Pps {
+        get {
+            return _pps;
+        }
+        set {
+            _pps = value;
+        }
+    }
+
+    public bool PickersUsed {
+        get {
+            return _pickersUsed;
+        }
+        set {
+            _pickersUsed = value;
+        }
+    }
 }
 
 public class Plastic : MonoBehaviour {
@@ -66,7 +94,24 @@ public class Plastic : MonoBehaviour {
         StartCoroutine(UpdatePlasticContinous());
     }
 
-    
+    public PlasticData GetData(PlasticData data) {
+        data.ErasedPlastic = CurrentErasedPlastic;
+        data.Pps = _permanentPps;
+        data.PickersUsed = _pickersInUse;
+
+        return data;
+    }
+
+    public void SetData(PlasticData data) {
+        CurrentErasedPlastic = data.ErasedPlastic;
+        _permanentPps = data.Pps;
+        _pickersInUse = data.PickersUsed;
+
+        _eraseInterval = 1 / _permanentPps;
+
+        UpdatePlasticText();
+        UpdatePpsText();
+    }
 
     public void UpdatePlastic(int cost, float pps) {
         CurrentErasedPlastic += cost;
@@ -75,7 +120,7 @@ public class Plastic : MonoBehaviour {
 
         _permanentPps += pps;
 
-        _ppsText.text = _permanentPps.ToString("F1") + " per second";
+        UpdatePpsText();
 
         _eraseInterval = 1 / _permanentPps;
     }
@@ -106,6 +151,10 @@ public class Plastic : MonoBehaviour {
 
     private void UpdatePlasticText() {
         _erasedPlasticText.text = "<size=60%>Erased  <size=100%><voffset=-0.1em>" + CurrentErasedPlastic + "</voffset> <size=60%>plastic!";
+    }
+
+    private void UpdatePpsText() {
+        _ppsText.text = _permanentPps.ToString("F1") + " per second";
     }
 
     private IEnumerator FluctuatePps(int inputPerSecond) {

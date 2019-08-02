@@ -6,10 +6,36 @@ using TMPro;
 
 [Serializable]
 public class PickerData {
-    private float _pickerPps;
     private int _pickerLevel;
-    private float _pickerCost;
+    private int _pickerCost;
     private bool _pickerButtonActive;
+    
+    public int PickerLevel {
+        get {
+            return _pickerLevel;
+        }
+        set {
+            _pickerLevel = value;
+        }
+    }
+
+    public int PickerCost {
+        get {
+            return _pickerCost;
+        }
+        set {
+            _pickerCost = value;
+        }
+    }
+
+    public bool PickerButtonActive {
+        get {
+            return _pickerButtonActive;
+        }
+        set {
+            _pickerButtonActive = value;
+        }
+    }
 }
 
 [Serializable]
@@ -21,7 +47,7 @@ public class PickerProperties {
 
 public class Picker : MonoBehaviour
 {
-    //private UIManager _uiManager;
+    private DataManager _dataManager;
 
     public PickerProperties pickerProperties;
 
@@ -38,11 +64,29 @@ public class Picker : MonoBehaviour
     private int _currentCost = 0;
 
     private void Start() {
-        //_uiManager = UIManager.Instance;
+        _dataManager = DataManager.Instance;
+
         _shopPpsNumberText.text = pickerProperties.pps.ToString();
         _shopCostNumberText.text = pickerProperties.startingCost.ToString();
 
         _currentCost = pickerProperties.startingCost;
+    }
+
+    public PickerData GetData(PickerData data) {
+        data.PickerLevel = _currentLevel;
+        data.PickerCost = _currentCost;
+        
+        data.PickerButtonActive = _pickerButton.activeInHierarchy;
+
+        return data;
+    }
+
+    public void SetData(PickerData data) {
+        _currentLevel = data.PickerLevel;
+        _currentCost = data.PickerCost;
+        _pickerButton.SetActive(data.PickerButtonActive);
+
+        UpdatePickerUI();
     }
 
     public void BuyPicker() {

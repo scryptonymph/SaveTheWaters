@@ -7,6 +7,24 @@ using System;
 public class TransactionData {
     private float _money;
     private float[] _prices;
+
+    public float Money {
+        get {
+            return _money;
+        }
+        set {
+            _money = value;
+        }
+    }
+
+    public float[] Prices {
+        get {
+            return _prices;
+        }
+        set {
+            _prices = value;
+        }
+    }
 }
 
 public class Transaction : MonoBehaviour
@@ -40,6 +58,18 @@ public class Transaction : MonoBehaviour
 
     private void Start() {
         CurrentMoney = 10;
+    }
+
+    public TransactionData GetData(TransactionData data) {
+        data.Money = CurrentMoney;
+        data.Prices = _yieldPrices;
+
+        return data;
+    }
+
+    public void SetData(TransactionData data) {
+        CurrentMoney = data.Money;
+        _yieldPrices = data.Prices;
     }
 
     public void PrepareTransaction(int _yield) {
