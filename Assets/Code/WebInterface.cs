@@ -4,49 +4,50 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 
-public class WebInterface : MonoBehaviour
-{
-    public void OpenWebsite(string websiteUrl) {
-        Application.OpenURL(websiteUrl);
-    }
-
-    [SerializeField] private Transaction _transaction;
-    [SerializeField] private GameObject _userInputField;
-    [SerializeField] private string _dataSaveUrl;
-
-    private string _name;
-    
-    private GameObject _donationChoice;
-
-    public GameObject DonationChoice {
-        set {
-            _donationChoice = value;
+namespace SaveTheWaters {
+    public class WebInterface : MonoBehaviour {
+        public void OpenWebsite(string websiteUrl) {
+            Application.OpenURL(websiteUrl);
         }
-    }
 
-    private float _donationSum;
+        [SerializeField] private Transaction _transaction;
+        [SerializeField] private GameObject _userInputField;
+        [SerializeField] private string _dataSaveUrl;
 
-    public void SendToWebsite() {
-        _name = _userInputField.GetComponent<TMP_InputField>().text;
+        private string _name;
 
-        Debug.Log("name " + _name);
+        private GameObject _donationChoice;
 
-        _donationSum = _transaction.CurrentPrice;
+        public GameObject DonationChoice {
+            set {
+                _donationChoice = value;
+            }
+        }
 
-        StartCoroutine(Send(_name, _donationChoice.GetComponent<TMP_Text>().text, _donationSum));
+        private float _donationSum;
 
-        _transaction.MakeTransaction();
-    }
+        public void SendToWebsite() {
+            _name = _userInputField.GetComponent<TMP_InputField>().text;
 
-    IEnumerator Send(string name, string donationChoice, float donationSum) {
-        WWWForm form = new WWWForm();
+            Debug.Log("name " + _name);
 
-        form.AddField("", name);
-        form.AddField("", donationChoice);
-        form.AddField("", donationSum.ToString());
+            _donationSum = _transaction.CurrentPrice;
 
-        UnityWebRequest www = UnityWebRequest.Post(_dataSaveUrl, form);
+            StartCoroutine(Send(_name, _donationChoice.GetComponent<TMP_Text>().text, _donationSum));
 
-        yield return www.SendWebRequest();
+            _transaction.MakeTransaction();
+        }
+
+        IEnumerator Send(string name, string donationChoice, float donationSum) {
+            WWWForm form = new WWWForm();
+
+            form.AddField("", name);
+            form.AddField("", donationChoice);
+            form.AddField("", donationSum.ToString());
+
+            UnityWebRequest www = UnityWebRequest.Post(_dataSaveUrl, form);
+
+            yield return www.SendWebRequest();
+        }
     }
 }

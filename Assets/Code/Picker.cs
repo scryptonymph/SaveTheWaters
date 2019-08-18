@@ -45,75 +45,76 @@ public class PickerProperties {
     public float costRaiseRate;
 }
 
-public class Picker : MonoBehaviour
-{
-    private DataManager _dataManager;
+namespace SaveTheWaters {
+    public class Picker : MonoBehaviour {
+        private DataManager _dataManager;
 
-    public PickerProperties pickerProperties;
+        public PickerProperties pickerProperties;
 
-    [SerializeField] private Plastic _plastic;
+        [SerializeField] private Plastic _plastic;
 
-    [SerializeField] private TMP_Text _shopPpsNumberText;
-    [SerializeField] private TMP_Text _shopCostNumberText;
-    [SerializeField] private TMP_Text _shopLevelNumberText;
-    [SerializeField] private TMP_Text _levelNumberText;
+        [SerializeField] private TMP_Text _shopPpsNumberText;
+        [SerializeField] private TMP_Text _shopCostNumberText;
+        [SerializeField] private TMP_Text _shopLevelNumberText;
+        [SerializeField] private TMP_Text _levelNumberText;
 
-    [SerializeField] private GameObject _pickerButton;
+        [SerializeField] private GameObject _pickerButton;
 
-    private int _currentLevel = 0;
-    private int _currentCost = 0;
+        private int _currentLevel = 0;
+        private int _currentCost = 0;
 
-    private void Start() {
-        _dataManager = DataManager.Instance;
+        private void Start() {
+            _dataManager = DataManager.Instance;
 
-        _shopPpsNumberText.text = pickerProperties.pps.ToString();
-        _shopCostNumberText.text = pickerProperties.startingCost.ToString();
+            _shopPpsNumberText.text = pickerProperties.pps.ToString();
+            _shopCostNumberText.text = pickerProperties.startingCost.ToString();
 
-        _currentCost = pickerProperties.startingCost;
-    }
-
-    public PickerData GetData(PickerData data) {
-        data.PickerLevel = _currentLevel;
-        data.PickerCost = _currentCost;
-        
-        data.PickerButtonActive = _pickerButton.activeInHierarchy;
-
-        return data;
-    }
-
-    public void SetData(PickerData data) {
-        _currentLevel = data.PickerLevel;
-        _currentCost = data.PickerCost;
-        _pickerButton.SetActive(data.PickerButtonActive);
-
-        UpdatePickerUI();
-    }
-
-    public void BuyPicker() {
-        if (_currentCost > _plastic.CurrentErasedPlastic) {
-            return;
+            _currentCost = pickerProperties.startingCost;
         }
 
-        if (!_pickerButton.activeInHierarchy) {
-            _pickerButton.SetActive(true);
+        public PickerData GetData(PickerData data) {
+            data.PickerLevel = _currentLevel;
+            data.PickerCost = _currentCost;
+
+            data.PickerButtonActive = _pickerButton.activeInHierarchy;
+
+            return data;
         }
 
-        if (!_plastic.PickersInUse) {
-            _plastic.PickersInUse = true;
+        public void SetData(PickerData data) {
+            _currentLevel = data.PickerLevel;
+            _currentCost = data.PickerCost;
+            _pickerButton.SetActive(data.PickerButtonActive);
+
+            UpdatePickerUI();
         }
 
-        _plastic.UpdatePlastic(-_currentCost, pickerProperties.pps);
+        public void BuyPicker() {
+            if(_currentCost > _plastic.CurrentErasedPlastic) {
+                return;
+            }
 
-        _currentCost = Mathf.RoundToInt(_currentCost * pickerProperties.costRaiseRate);
+            if(!_pickerButton.activeInHierarchy) {
+                _pickerButton.SetActive(true);
+            }
 
-        _currentLevel++;
+            if(!_plastic.PickersInUse) {
+                _plastic.PickersInUse = true;
+            }
 
-        UpdatePickerUI();
-    }
+            _plastic.UpdatePlastic(-_currentCost, pickerProperties.pps);
 
-    private void UpdatePickerUI() {
-        _shopCostNumberText.text = _currentCost.ToString();
-        _shopLevelNumberText.text = _currentLevel.ToString();
-        _levelNumberText.text = _currentLevel.ToString();
+            _currentCost = Mathf.RoundToInt(_currentCost * pickerProperties.costRaiseRate);
+
+            _currentLevel++;
+
+            UpdatePickerUI();
+        }
+
+        private void UpdatePickerUI() {
+            _shopCostNumberText.text = _currentCost.ToString();
+            _shopLevelNumberText.text = _currentLevel.ToString();
+            _levelNumberText.text = _currentLevel.ToString();
+        }
     }
 }

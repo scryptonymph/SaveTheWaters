@@ -27,76 +27,79 @@ public class TransactionData {
     }
 }
 
-public class Transaction : MonoBehaviour
-{
-    [SerializeField] private float[] _yieldPrices;
+namespace SaveTheWaters {
+    public class Transaction : MonoBehaviour {
+        [SerializeField] private float[] _yieldPrices;
 
-    [SerializeField] private Plastic _plastic;
+        [SerializeField] private Plastic _plastic;
 
-    [SerializeField] private GameObject _donationWindow;
+        [SerializeField] private GameObject _donationWindow;
 
-    private float _currentMoney;
+        private float _currentMoney;
 
-    public float CurrentMoney {
-        get {
-            return _currentMoney;
-        }
-        private set {
-            _currentMoney = value;
-        }
-    }
-
-    private int _yield;
-
-    private float _currentPrice;
-
-    public float CurrentPrice {
-        get {
-            return _currentPrice;
-        }
-    }
-
-    private void Start() {
-        CurrentMoney = 10;
-    }
-
-    public TransactionData GetData(TransactionData data) {
-        data.Money = CurrentMoney;
-        data.Prices = _yieldPrices;
-
-        return data;
-    }
-
-    public void SetData(TransactionData data) {
-        CurrentMoney = data.Money;
-        _yieldPrices = data.Prices;
-    }
-
-    public void PrepareTransaction(int _yield) {
-        switch (_yield) {
-            case 1:
-                _currentPrice = _yieldPrices[0];
-                break;
-            case 3:
-                _currentPrice = _yieldPrices[1];
-                break;
-            case 7:
-                _currentPrice = _yieldPrices[2];
-                break;
+        public float CurrentMoney {
+            get {
+                return _currentMoney;
+            }
+            private set {
+                _currentMoney = value;
+            }
         }
 
-        if (_currentPrice > CurrentMoney || !_plastic.PickersInUse) {
-            return;
+        private int _yield;
+
+        private float _currentPrice;
+
+        public float CurrentPrice {
+            get {
+                return _currentPrice;
+            }
         }
 
-        _donationWindow.SetActive(true);
-    }
+        private void Start() {
+            CurrentMoney = 10;
+        }
 
-    public void MakeTransaction() {
-        CurrentMoney -= _currentPrice;
+        public TransactionData GetData(TransactionData data) {
+            data.Money = CurrentMoney;
+            data.Prices = _yieldPrices;
 
-        Debug.Log("money " + CurrentMoney);
+            return data;
+        }
 
-        _plastic.UpdatePlastic(_yield);
+        public void SetData(TransactionData data) {
+            CurrentMoney = data.Money;
+            _yieldPrices = data.Prices;
+        }
+
+        public void PrepareTransaction(int _yield) {
+            switch(_yield) {
+                case 1:
+                    _currentPrice = _yieldPrices[0];
+                    break;
+                case 3:
+                    _currentPrice = _yieldPrices[1];
+                    break;
+                case 7:
+                    _currentPrice = _yieldPrices[2];
+                    break;
+            }
+
+            if(_currentPrice > CurrentMoney || !_plastic.PickersInUse) {
+                return;
+            }
+
+            this._yield = _yield;
+
+            _donationWindow.SetActive(true);
+        }
+
+        public void MakeTransaction() {
+            CurrentMoney -= _currentPrice;
+
+            Debug.Log("money " + CurrentMoney);
+
+            _plastic.UpdatePlastic(_yield);
+        }
     }
 }
